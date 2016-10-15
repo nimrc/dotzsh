@@ -4,6 +4,9 @@ sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/i
 # install plugins
 git clone --depth=1 https://git.coding.net/fyibmsd/zsh.git ~/.zsh
 cd ~/.zsh
+# local config
+touch .zsh_local
+# submodule
 git submodule init
 git submodule update
 echo "source ~/.zsh/.zsh_profile" >> ~/.zshrc
