@@ -90,7 +90,7 @@ alias ali="ssh root@fyibmsd.com"
 
 # Golang
 export GOROOT=/usr/local/opt/go/libexec
-export GOPATH=/Users/fyibmsd/code/golang
+export GOPATH=/usr/local/share/go
 export PATH=$PATH:$GOPATH/bin:$GOROOT/bin
 export PHP=$HOME/code/php
 export PTOOLSPATH=$HOME/code/php/library/vendor/phalcon/devtools
