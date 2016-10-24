@@ -66,7 +66,7 @@ alias phpini="subl /usr/local/etc/php/5.6/php.ini"
 alias pac="subl ~/code/php/www/vps.pac"
 
 # extra
-alias serve="php -S 0.0.0.0:8000 -t ."
+alias server="php -S 0.0.0.0:8000 -t ."
 
 # brew services
 alias start="brew services start"
@@ -82,16 +82,30 @@ alias ip="ifconfig | grep 'inet ' | uniq"
 # vps
 alias ol="ssh root@101.201.71.143 -p 2322"
 alias vagr="ssh vagrant@192.168.10.10"
-alias cent="ssh vagrant@192.168.10.20"
+alias co="ssh core@192.168.10.30"
 alias rhel="ssh me@54.64.9.18"
 alias ecs01="ssh root@123.56.4.184"
 alias ecs02="ssh root@60.205.189.57"
 alias ali="ssh root@fyibmsd.com"
 
+# add nginx vhost
+alias serve=serve-nginx
+
+function serve-nginx() {
+    if [[ "$1" && "$2" ]]
+    then
+        sudo bash ~/.zsh/utils/serve.sh "$1" "$2" mac
+    else
+        echo "Desc: Add nginx vhost."
+        echo "Usage: "
+        echo "  serve domain path"
+    fi
+}
+
 # Golang
 export GOROOT=/usr/local/opt/go/libexec
 export GOPATH=/usr/local/share/go
-export PATH=$PATH:$GOPATH/bin:$GOROOT/bin
+export PATH=$PATH:$GOPATH/bin:$GOROOT/bin:~/.composer/vendor/bin:/usr/local/sbin
 export PHP=$HOME/code/php
 export PTOOLSPATH=$HOME/code/php/library/vendor/phalcon/devtools
 
