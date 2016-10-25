@@ -105,7 +105,7 @@ function serve-nginx() {
 # Golang
 export GOROOT=/usr/local/opt/go/libexec
 export GOPATH=/usr/local/share/go
-export PATH=$PATH:$GOPATH/bin:$GOROOT/bin:~/.composer/vendor/bin:/usr/local/sbin
+export PATH=$PATH:$GOPATH/bin:$GOROOT/bin:~/.composer/vendor/bin:/usr/local/sbin:/usr/sbin:/sbin:/usr/local/bin:/usr/bin:/bin
 export PHP=$HOME/code/php
 export PTOOLSPATH=$HOME/code/php/library/vendor/phalcon/devtools
 
