@@ -81,6 +81,7 @@ alias ip="ifconfig | grep 'inet ' | uniq"
 
 # vps
 alias ol="ssh root@101.201.71.143 -p 2322"
+alias dev="ssh root@172.18.1.7"
 alias vagr="ssh vagrant@192.168.10.10"
 alias co="ssh core@192.168.10.30"
 alias rhel="ssh me@54.64.9.18"
@@ -102,15 +103,22 @@ function serve-nginx() {
     fi
 }
 
+# Java
+export JAVA_HOME=/usr/local/opt/jdk/Contents/Home
+export CLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar
+
 # Golang
 export GOROOT=/usr/local/opt/go/libexec
 export GOPATH=/usr/local/share/go
-export PATH=$PATH:$GOPATH/bin:$GOROOT/bin:~/.composer/vendor/bin:/usr/local/sbin:/usr/sbin:/sbin:/usr/local/bin:/usr/bin:/bin
 export PHP=$HOME/code/php
 export PTOOLSPATH=$HOME/code/php/library/vendor/phalcon/devtools
 
+# NodeJS
 export NODE_PATH="/usr/local/lib/node_modules"
 export EDITOR="/usr/local/bin/vim"
+
+export PATH=$PATH:$JAVA_HOME/bin:$GOPATH/bin:$GOROOT/bin:~/.composer/vendor/bin
+
 
 # Highlight linux man page
 export LESS_TERMCAP_mb=$'\E[01;31m'
