@@ -80,7 +80,7 @@ alias npm="npm --registry=https://registry.npm.taobao.org --disturl=https://npm.
 alias ip="ifconfig | grep 'inet ' | uniq"
 
 # vps
-alias ol="ssh root@101.201.71.143 -p 2322"
+alias ol="ssh work@101.201.71.143 -p 2322"
 alias dev="ssh root@172.18.1.7"
 alias vagr="ssh vagrant@192.168.10.10"
 alias co="ssh core@192.168.10.30"
