@@ -90,20 +90,6 @@ alias ecs01="ssh root@123.56.4.184"
 alias ecs02="ssh root@60.205.189.57"
 alias ali="ssh root@fyibmsd.com"
 
-# add nginx vhost
-alias serve=serve-nginx
-
-function serve-nginx() {
-    if [[ "$1" && "$2" ]]
-    then
-        sudo bash ~/.zsh/utils/serve.sh "$1" "$2" mac
-    else
-        echo "Desc: Add nginx vhost."
-        echo "Usage: "
-        echo "  serve domain path"
-    fi
-}
-
 # Java
 export JAVA_HOME=/usr/local/opt/jdk/Contents/Home
 export CLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar
