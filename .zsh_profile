@@ -90,6 +90,14 @@ alias ecs01="ssh root@123.56.4.184"
 alias ecs02="ssh root@60.205.189.57"
 alias ali="ssh root@fyibmsd.com"
 
+# docker
+function drm() {
+    docker ps -a | grep 'Exited' | awk '{print $1}' | xargs docker rm
+}
+function drmi() {
+    docker images | grep '<none>' | awk '{print $3}' | xargs docker rmi
+}
+
 # Java
 export JAVA_HOME=/usr/local/opt/jdk/Contents/Home
 export CLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar
