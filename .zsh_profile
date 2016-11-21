@@ -54,6 +54,12 @@ function destroy() {
    /bin/rm -rf $current
 }
 
+function update() {
+    git add .
+    git commit -m "update"
+    ggpush
+}
+
 # }
 
 # functions
