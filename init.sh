@@ -4,7 +4,7 @@ rm -rf ~/.zsh ~/.oh-my-zsh ~/.zshrc
 # install oh-my-zsh
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 # install plugins
-git clone --depth=1 https://git.coding.net/fyibmsd/zsh.git ~/.zsh
+git clone --depth=1 https://github.com/fyibmsd/dotzsh.git ~/.zsh
 cd ~/.zsh
 # local config
 touch .zsh_local
