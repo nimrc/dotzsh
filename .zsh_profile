@@ -109,7 +109,7 @@ export JAVA_HOME=/usr/java/default
 export CLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar
 
 # Golang
-export GOROOT=/usr/local/opt/go/libexec
+export GOROOT=/usr/local/go
 export GOPATH=/usr/local/share/go
 export PHP=$HOME/code/php
 export PTOOLSPATH=$HOME/code/php/library/vendor/phalcon/devtools
