@@ -28,15 +28,7 @@ alias clone='git clone --depth=1'
 alias subl=/opt/sublime_text/sublime_text %F
 alias mweb="/Applications/MWeb.app/Contents/MacOS/MWeb"
 
-code () {  
-    if [[ $# = 0 ]]  
-    then  
-        open -a "Visual Studio Code" 
-    else 
-        [[ $1 = /* ]] && F="$1" || F="$PWD/${1#./}" 
-        open -a "Visual Studio Code" --args "$F" 
-    fi  
-}  
+alias code=/usr/share/code/code --new-window-if-not-first %U
 
 function cdf() {
     target=`osascript -e 'tell application "Finder" to if (count of Finder windows) > 0 then get POSIX path of (target of front Finder window as text)'`
