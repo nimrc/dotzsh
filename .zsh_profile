@@ -55,9 +55,23 @@ function update() {
 # }
 
 # functions
+alias serve=serve-laravel
 alias homestead='function __homestead() { (cd ~/.composer/vendor/laravel/homestead && vagrant $*); unset -f __homestead; }; __homestead'
 alias centos='function __centos() { (cd ~/code/vagrant/centos && vagrant $*); unset -f __centos; }; __centos'
 alias clone='git clone --depth=1'
+
+# homestead
+function serve-laravel() {
+    if [[ "$1" && "$2" ]]
+    then
+        sudo dos2unix /home/fyibmsd/.composer/vendor/laravel/homestead/scripts/serve-laravel.sh
+        sudo bash /home/fyibmsd/.composer/vendor/laravel/homestead/scripts/serve-laravel.sh "$1" "$2" 80
+    else
+        echo "Error: missing required parameters."
+        echo "Usage: "
+        echo "  serve domain path"
+    fi
+}
 
 # config files
 alias hosts="subl /etc/hosts"
