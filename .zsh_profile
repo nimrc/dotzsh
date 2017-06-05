@@ -63,7 +63,10 @@ function update() {
 # }
 
 # functions
-alias homestead='function __homestead() { (cd ~/.composer/vendor/laravel/homestead && vagrant $*); unset -f __homestead; }; __homestead'
+function homestead() {
+    ( cd ~/.composer/vendor/laravel/homestead && vagrant $* )
+}
+
 alias centos='function __centos() { (cd ~/code/scripts/vagrant/centos && vagrant $*); unset -f __centos; }; __centos'
 alias clone='git clone --depth=1'
 
@@ -109,7 +112,7 @@ export JAVA_HOME=`/System/Library/Frameworks/JavaVM.framework/Versions/Current/C
 export CLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar
 
 # Golang
-export GOROOT=/usr/local/go
+export GOROOT=/usr/local/opt/go/libexec
 export GOPATH=/usr/local/share/go
 export PHP=$HOME/code/php
 export PTOOLSPATH=$HOME/code/php/library/vendor/phalcon/devtools
