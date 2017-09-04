@@ -63,6 +63,15 @@ function update() {
 # }
 
 # functions
+#
+# change php version
+function chp () {
+    cur=$(ll `which php` | awk -F '/' '{print $7}')
+    brew unlink $cur
+    brew link $1
+}
+
+#
 function homestead() {
     ( cd ~/.composer/vendor/laravel/homestead && vagrant $* )
 }
