@@ -65,8 +65,8 @@ alias clone='git clone --depth=1'
 function serve-laravel() {
     if [[ "$1" && "$2" ]]
     then
-        sudo dos2unix /home/fyibmsd/.composer/vendor/laravel/homestead/scripts/serve-laravel.sh
-        sudo bash /home/fyibmsd/.composer/vendor/laravel/homestead/scripts/serve-laravel.sh "$1" "$2" 80
+        sudo dos2unix ~/.config/composer/vendor/laravel/homestead/scripts/serve-laravel.sh
+        sudo bash ~/.config/composer/vendor/laravel/homestead/scripts/serve-laravel.sh "$1" "$2" 80
     else
         echo "Error: missing required parameters."
         echo "Usage: "
