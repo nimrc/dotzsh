@@ -22,6 +22,11 @@ alias -s zip='unzip'
 alias -s bz2='tar -xjvf'
 
 alias clone='git clone --depth=1'
+
+alias proxy='export ALL_PROXY=socks5://127.0.0.1:1080'
+
+alias rmpyc='find . -name "*.pyc" | xargs rm'
+
 # }
 
 # Software {
@@ -69,6 +74,14 @@ function chp () {
     cur=$(ll `which php` | awk -F '/' '{print $7}')
     brew unlink $cur
     brew link $1
+}
+
+function github() {
+	n=$(echo $1 | awk -F ':' '{print $2}')
+	d=~/code/org/github/$n[0,-5]
+	/bin/mkdir -p $d
+	/usr/local/bin/git clone --depth=1 $1 $d
+	cd $d
 }
 
 #
@@ -138,10 +151,15 @@ export PTOOLSPATH=$HOME/code/php/library/vendor/phalcon/devtools
 export NODE_PATH="/usr/local/lib/node_modules"
 export EDITOR="/usr/local/bin/vim"
 
-export PATH=/usr/local/opt/python/libexec/bin:$PATH:$JAVA_HOME/bin:$GOPATH/bin:$GOROOT/bin:~/.composer/vendor/bin
+export PYENV_ROOT=$HOME/.pyenv
+
+export PATH=/usr/local/opt/bison/bin:/usr/local/sbin:/usr/local/opt/python/libexec/bin:$PATH:$JAVA_HOME/bin:$GOPATH/bin:$GOROOT/bin:~/.composer/vendor/bin:$PYENV_ROOT/bin
 
 # include libs
 export PHP_ZLIB_DIR="/usr/local/opt/zlib"
+
+# homebrew http://ban.ninja/
+export HOMEBREW_BOTTLE_DOMAIN=http://7xkcej.dl1.z0.glb.clouddn.com
 
 
 # Highlight linux man page
