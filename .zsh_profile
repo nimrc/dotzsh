@@ -82,6 +82,9 @@ alias pac="subl ~/code/php/www/vps.pac"
 # extra
 alias server="php -S 0.0.0.0:8000 -t ."
 
+# change version
+alias chv="sudo update-alternatives --config"
+
 # brew services
 alias start="brew services start"
 alias status="brew services status"
