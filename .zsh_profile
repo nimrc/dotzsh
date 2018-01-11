@@ -153,7 +153,7 @@ export EDITOR="/usr/local/bin/vim"
 
 export PYENV_ROOT=$HOME/.pyenv
 
-export PATH=/usr/local/opt/bison/bin:/usr/local/sbin:/usr/local/opt/python/libexec/bin:$PATH:$JAVA_HOME/bin:$GOPATH/bin:$GOROOT/bin:~/.composer/vendor/bin:$PYENV_ROOT/bin
+export PATH=/usr/local/opt/qt/bin:/usr/local/opt/bison/bin:/usr/local/sbin:/usr/local/opt/python/libexec/bin:$PATH:$JAVA_HOME/bin:$GOPATH/bin:$GOROOT/bin:~/.composer/vendor/bin:$PYENV_ROOT/bin
 
 # include libs
 export PHP_ZLIB_DIR="/usr/local/opt/zlib"
