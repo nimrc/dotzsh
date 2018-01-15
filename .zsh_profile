@@ -130,11 +130,13 @@ export PTOOLSPATH=$HOME/code/php/library/vendor/phalcon/devtools
 export NODE_PATH="/usr/local/lib/node_modules"
 export EDITOR="/usr/local/bin/vim"
 
-export PATH=~/.config/composer/vendor/bin:$PATH:$JAVA_HOME/bin:$GOPATH/bin:$HADOOP_HOME/bin:$FLUME_HOME/bin:$GOROOT/bin
+# pyenv
+export PYENV_ROOT="$HOME/.pyenv"
+
+export PATH=~/.config/composer/vendor/bin:$PATH:$JAVA_HOME/bin:$GOPATH/bin:$HADOOP_HOME/bin:$FLUME_HOME/bin:$GOROOT/bin:$PYENV_ROOT/bin
 
 # include libs
 export PHP_ZLIB_DIR="/usr/local/opt/zlib"
-
 
 # Highlight linux man page
 export LESS_TERMCAP_mb=$'\E[01;31m'
