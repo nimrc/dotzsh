@@ -133,7 +133,9 @@ export EDITOR="/usr/local/bin/vim"
 # pyenv
 export PYENV_ROOT="$HOME/.pyenv"
 
-export PATH=~/.config/composer/vendor/bin:$PATH:$JAVA_HOME/bin:$GOPATH/bin:$HADOOP_HOME/bin:$FLUME_HOME/bin:$GOROOT/bin:$PYENV_ROOT/bin
+export COMPOSER_ROOT="$HOME/.config/composer"
+
+export PATH=$PYENV_ROOT/shims:$PYENV_ROOT/bin:$COMPOSER_ROOT/vendor/bin:$PATH:$JAVA_HOME/bin:$GOPATH/bin:$HADOOP_HOME/bin:$FLUME_HOME/bin:$GOROOT/bin
 
 # include libs
 export PHP_ZLIB_DIR="/usr/local/opt/zlib"
