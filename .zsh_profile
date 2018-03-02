@@ -122,8 +122,8 @@ export FLUME_HOME=/usr/local/flume
 export HADOOP_HOME=/usr/local/hadoop
 
 # Golang
-export GOROOT=/usr/local/go
-export GOPATH=/usr/local/share/go
+export GOROOT=/usr/lib/go
+export GOPATH=$HOME/code/go
 export PHP=$HOME/code/php
 export PTOOLSPATH=$HOME/code/php/library/vendor/phalcon/devtools
 
