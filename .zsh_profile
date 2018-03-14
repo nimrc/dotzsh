@@ -85,6 +85,7 @@ alias server="php -S 0.0.0.0:8000 -t ."
 
 # change version
 alias chv="sudo update-alternatives --config"
+alias chp="sudo update-alternatives --set php"
 
 # brew services
 alias start="brew services start"
