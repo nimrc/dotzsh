@@ -87,13 +87,6 @@ alias server="php -S 0.0.0.0:8000 -t ."
 alias chv="sudo update-alternatives --config"
 alias chp="sudo update-alternatives --set php"
 
-# brew services
-alias start="brew services start"
-alias status="brew services status"
-alias stop="brew services stop"
-alias restart="brew services restart"
-alias list="brew services list"
-
 # alias composer="php -c /usr/local/etc/php/5.6/composer.ini /usr/local/bin/composer $*"
 alias ip="ifconfig | grep 'inet ' | uniq"
 
