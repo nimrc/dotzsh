@@ -87,7 +87,6 @@ alias server="php -S 0.0.0.0:8000 -t ."
 alias chv="sudo update-alternatives --config"
 alias chp="sudo update-alternatives --set php"
 
-# alias composer="php -c /usr/local/etc/php/5.6/composer.ini /usr/local/bin/composer $*"
 alias ip="ifconfig | grep 'inet ' | uniq"
 
 # vps
@@ -109,7 +108,7 @@ function drmi() {
 }
 
 # Java
-export JAVA_HOME=/usr/lib/jvm/default-java/
+export JAVA_HOME=/usr/lib/jvm/default-java
 export CLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar
 
 export FLUME_HOME=/usr/local/flume
