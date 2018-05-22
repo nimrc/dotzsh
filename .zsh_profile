@@ -13,8 +13,11 @@ prompt_context () {
 # }
 
 # alias {
-alias ll="ls -la"
+alias ll='ls -lah'
 alias vi=vim
+
+alias ag='ag --color-match=36'
+alias pack="mvn clean package -DskipTests=true -Dmaven.test.skip=true"
 
 alias -s gz='tar -xzvf'
 alias -s tgz='tar -xzvf'
