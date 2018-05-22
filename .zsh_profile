@@ -73,9 +73,7 @@ function update() {
 #
 # change php version
 function chp () {
-    cur=$(ll `which php` | awk -F '/' '{print $7}')
-    brew unlink $cur
-    brew link $1
+    echo $1 > ~/.php_version
 }
 
 function github() {
@@ -130,6 +128,9 @@ function drmi() {
     docker images -a | grep '<none>' | awk '{print $3}' | xargs docker rmi
 }
 
+# PHP
+export PHP_HOME="/usr/local/opt/php@`cat ~/.php_version`"
+
 # Java
 export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
 export CLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar
@@ -146,7 +147,7 @@ export EDITOR="/usr/local/bin/vim"
 
 export PYENV_ROOT=$HOME/.pyenv
 
-export PATH=$PYENV_ROOT/shims:/usr/local/opt/qt/bin:/usr/local/opt/bison/bin:/usr/local/sbin:$JAVA_HOME/bin:$GOPATH/bin:$GOROOT/bin:~/.composer/vendor/bin:$PYENV_ROOT/bin:$PATH
+export PATH=$PYENV_ROOT/shims:/usr/local/opt/qt/bin:/usr/local/opt/bison/bin:/usr/local/sbin:$PHP_HOME/bin:$PHP_HOME/sbin:$JAVA_HOME/bin:$GOPATH/bin:$GOROOT/bin:~/.composer/vendor/bin:$PYENV_ROOT/bin:$PATH
 
 # include libs
 export PHP_ZLIB_DIR="/usr/local/opt/zlib"
