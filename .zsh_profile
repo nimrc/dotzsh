@@ -66,8 +66,7 @@ alias clone='git clone --depth=1'
 function serve-laravel() {
     if [[ "$1" && "$2" ]]
     then
-        sudo dos2unix ~/.config/composer/vendor/laravel/homestead/scripts/serve-laravel.sh
-        sudo bash ~/.config/composer/vendor/laravel/homestead/scripts/serve-laravel.sh "$1" "$2" 80
+		sudo bash /home/work/code/scripts/nginx-conf/serve-laravel.sh "$1" "$2" 80
     else
         echo "Error: missing required parameters."
         echo "Usage: "
@@ -115,7 +114,7 @@ export FLUME_HOME=/usr/local/flume
 export HADOOP_HOME=/usr/local/hadoop
 
 # Golang
-export GOROOT=/usr/lib/go
+export GOROOT=/usr/local/go
 export GOPATH=$HOME/code/go
 export PHP=$HOME/code/php
 export PTOOLSPATH=$HOME/code/php/library/vendor/phalcon/devtools
