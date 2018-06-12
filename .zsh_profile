@@ -16,6 +16,8 @@ prompt_context () {
 alias ll='ls -lah'
 alias vi=vim
 
+alias mail='/bin/cat /dev/null > /var/mail/fyibmsd'
+
 alias ag='ag --color-match=36'
 alias pack="mvn clean package -DskipTests=true -Dmaven.test.skip=true"
 
@@ -77,6 +79,12 @@ function update() {
 # change php version
 function chp () {
     echo $1 > ~/.php_version
+}
+
+function run () {
+	gcc $1 -o /tmp/$1
+	/tmp/$1
+	rm /tmp/$1
 }
 
 function github() {
