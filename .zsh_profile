@@ -97,7 +97,7 @@ function github() {
 
 #
 function homestead() {
-    ( cd ~/.composer/vendor/laravel/homestead && vagrant $* )
+    ( cd ~/.homestead && vagrant $* )
 }
 
 function centos() {
