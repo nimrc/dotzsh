@@ -139,6 +139,8 @@ function drmi() {
     docker images -a | grep '<none>' | awk '{print $3}' | xargs docker rmi
 }
 
+export LC_CTYPE="zh_CN.UTF-8"
+
 # PHP
 export PHP_HOME="/usr/local/opt/php@`cat ~/.php_version`"
 
