@@ -156,11 +156,13 @@ export PTOOLSPATH=$HOME/code/php/library/vendor/phalcon/devtools
 
 # NodeJS
 export NODE_PATH="/usr/local/lib/node_modules"
+export NODE_HOME="/usr/local/opt/node@10"
 export EDITOR="/usr/local/bin/vim"
 
+# Pyenv
 export PYENV_ROOT=$HOME/.pyenv
 
-export PATH=$PYENV_ROOT/shims:/usr/local/opt/qt/bin:/usr/local/opt/bison/bin:/usr/local/sbin:$PHP_HOME/bin:$PHP_HOME/sbin:$JAVA_HOME/bin:$GOPATH/bin:$GOROOT/bin:~/.composer/vendor/bin:$PYENV_ROOT/bin:$PATH
+export PATH=$NODE_HOME/bin:$PYENV_ROOT/shims:/usr/local/opt/qt/bin:/usr/local/opt/bison/bin:/usr/local/sbin:$PHP_HOME/bin:$PHP_HOME/sbin:$JAVA_HOME/bin:$GOPATH/bin:$GOROOT/bin:~/.composer/vendor/bin:$PYENV_ROOT/bin:$PATH
 
 # include libs
 export PHP_ZLIB_DIR="/usr/local/opt/zlib"
