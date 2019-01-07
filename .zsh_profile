@@ -162,7 +162,10 @@ export EDITOR="/usr/local/bin/vim"
 # Pyenv
 export PYENV_ROOT=$HOME/.pyenv
 
-export PATH=$NODE_HOME/bin:$PYENV_ROOT/shims:/usr/local/opt/qt/bin:/usr/local/opt/bison/bin:/usr/local/sbin:$PHP_HOME/bin:$PHP_HOME/sbin:$JAVA_HOME/bin:$GOPATH/bin:$GOROOT/bin:~/.composer/vendor/bin:$PYENV_ROOT/bin:$PATH
+# Rust
+export RUST_HOME=/usr/local/opt/rust
+
+export PATH=$NODE_HOME/bin:$PYENV_ROOT/shims:/usr/local/opt/qt/bin:/usr/local/opt/bison/bin:/usr/local/sbin:$PHP_HOME/bin:$PHP_HOME/sbin:$JAVA_HOME/bin:$GOPATH/bin:$GOROOT/bin:~/.composer/vendor/bin:$PYENV_ROOT/bin:~/.cargo/bin:$PATH
 
 # include libs
 export PHP_ZLIB_DIR="/usr/local/opt/zlib"
