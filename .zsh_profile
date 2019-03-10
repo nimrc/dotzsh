@@ -67,9 +67,13 @@ function destroy() {
    /bin/rm -rf $current
 }
 
+function inspire() {
+	php /Users/fyibmsd/code/php/laravel/artisan inspire
+}
+
 # git update
 function update() {
-	git add . && git commit -m "update" && git push origin $(git_current_branch)
+	git add . && git commit -m $(inspire) && git push origin $(git_current_branch)
 }
 
 # }
