@@ -48,7 +48,8 @@ function destroy() {
 }
 
 function update() {
-	comment=${1-update}
+	lorem=$(curl -skL https://lorem.nimrc.com)
+	comment=${1-lorem}
     git add .
     git commit -m $comment
     ggpush
