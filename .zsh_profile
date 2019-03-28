@@ -160,18 +160,18 @@ export NODE_HOME="/usr/local/opt/node@10"
 export EDITOR="/usr/local/bin/vim"
 
 # Pyenv
-export PYENV_ROOT=$HOME/.pyenv
+# export PYENV_ROOT=$HOME/.pyenv
 
 # Rust
 export RUST_HOME=/usr/local/opt/rust
 
-export PATH=$NODE_HOME/bin:$PYENV_ROOT/shims:/usr/local/opt/qt/bin:/usr/local/opt/bison/bin:/usr/local/sbin:$PHP_HOME/bin:$PHP_HOME/sbin:$JAVA_HOME/bin:$GOPATH/bin:$GOROOT/bin:~/.composer/vendor/bin:$PYENV_ROOT/bin:~/.cargo/bin:$PATH
+export PATH=$NODE_HOME/bin:/usr/local/opt/qt/bin:/usr/local/opt/bison/bin:/usr/local/sbin:$PHP_HOME/bin:$PHP_HOME/sbin:$JAVA_HOME/bin:$GOPATH/bin:$GOROOT/bin:~/.composer/vendor/bin:~/.cargo/bin:$PATH
 
 # include libs
 export PHP_ZLIB_DIR="/usr/local/opt/zlib"
 
-# homebrew http://ban.ninja/
-export HOMEBREW_BOTTLE_DOMAIN=http://7xkcej.dl1.z0.glb.clouddn.com
+# homebrew http://ban.ninja/ @dep
+export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles
 
 
 # Highlight linux man page
