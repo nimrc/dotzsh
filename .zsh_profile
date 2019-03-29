@@ -111,8 +111,6 @@ function dip() {
 	docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' $1
 }
 
-export ZSH_DISABLE_COMPFIX=true
-
 # Java
 export JAVA_HOME=/usr/lib/jvm/default-java
 export CLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar
