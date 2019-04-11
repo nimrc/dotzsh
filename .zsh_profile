@@ -23,6 +23,8 @@ alias -s zip='unzip'
 alias -s bz2='tar -xjvf'
 
 alias clone='git clone --depth=1'
+alias gpc='git push $1 $(current_branch)'
+
 # }
 
 # Software {
