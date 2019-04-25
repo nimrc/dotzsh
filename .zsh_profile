@@ -95,6 +95,14 @@ function github() {
 	cd $d
 }
 
+function org() {
+	n=$(echo $1 | awk -F ':' '{print $2}')
+	d=~/code/org/$n[0,-5]
+	/bin/mkdir -p $d
+	/usr/local/bin/git clone --depth=1 $1 $d
+	cd $d
+}
+
 #
 function homestead() {
     ( cd ~/.homestead && vagrant $* )
