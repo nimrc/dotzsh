@@ -71,7 +71,7 @@ function destroy() {
 function update() {
 	lorem="$(curl -sL https://lorem.nimrc.com/)"
 	comment=${1-$lorem}
-	git add . && git commit -m "$(comment)" && git push origin $(git_current_branch)
+	git add . && git commit -m $comment && git push origin $(git_current_branch)
 }
 
 # }
