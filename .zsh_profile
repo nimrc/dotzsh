@@ -84,7 +84,7 @@ function chp () {
 }
 
 function run () {
-	gcc $1 -o /tmp/$1
+	g++ $1 -o /tmp/$1
 	/tmp/$1
 	rm /tmp/$1
 }
@@ -162,6 +162,7 @@ export CLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar
 export GOROOT=/usr/local/opt/go/libexec
 export GOPATH=/Users/fyibmsd/code/go
 export GO111MODULE=auto
+export GOPROXY=https://goproxy.io
 
 export PHP=$HOME/code/php
 export PTOOLSPATH=$HOME/code/php/library/vendor/phalcon/devtools
