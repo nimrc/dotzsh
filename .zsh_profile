@@ -69,9 +69,7 @@ function destroy() {
 
 # git update
 function update() {
-	lorem="$(curl -sL https://lorem.nimrc.com/)"
-	comment=${1-$lorem}
-	git add . && git commit -m $comment && git push origin $(git_current_branch)
+	git add . && git commit -m "update" && git push origin $(git_current_branch)
 }
 
 # }
@@ -163,7 +161,6 @@ export GOROOT=/usr/local/opt/go/libexec
 export GOPATH=/Users/fyibmsd/code/go
 export GO111MODULE=auto
 export GOPROXY=https://goproxy.io
-
 export PHP=$HOME/code/php
 export PTOOLSPATH=$HOME/code/php/library/vendor/phalcon/devtools
 
