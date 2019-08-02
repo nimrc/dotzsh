@@ -159,7 +159,7 @@ export CLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar
 # Golang
 export GOROOT=/usr/local/opt/go/libexec
 export GOPATH=/Users/fyibmsd/code/go
-export GO111MODULE=auto
+export GO111MODULE=on
 export GOPROXY=https://goproxy.io
 export PHP=$HOME/code/php
 export PTOOLSPATH=$HOME/code/php/library/vendor/phalcon/devtools
