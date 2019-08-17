@@ -131,10 +131,10 @@ alias pac="subl ~/code/php/www/vps.pac"
 alias server="php -S 0.0.0.0:8000 -t ."
 
 # brew services
+alias bls="brew services list"
 alias bst="brew services start"
 alias bsp="brew services stop"
 alias bsr="brew services restart"
-alias bsls="brew services list"
 
 # alias composer="php -c /usr/local/etc/php/5.6/composer.ini /usr/local/bin/composer $*"
 alias ip="ifconfig | grep 'inet ' | uniq"
