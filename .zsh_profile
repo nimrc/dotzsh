@@ -4,8 +4,6 @@ source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 plugins=(zsh-autosuggestions)
 
-set -o vi
-
 # config {
 
 prompt_context () {
