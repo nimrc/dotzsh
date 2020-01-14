@@ -205,3 +205,10 @@ serve () {
 		echo "  serve domain path"
 	fi
 }
+
+# elk
+export ES_HOME=/usr/local/var/homebrew/linked/elasticsearch-full
+export ES_DATA=/usr/local/var/lib/elasticsearch
+export KIBANA_HOME=/usr/local/var/homebrew/linked/kibana-full
+export KIBANA_DATA=/usr/local/var/log/kibana
+
