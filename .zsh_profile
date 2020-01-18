@@ -136,7 +136,7 @@ export PYENV_ROOT="$HOME/.pyenv"
 export COMPOSER_ROOT="$HOME/.config/composer"
 
 
-export PATH=$HADOOP_HOME/bin:$HADOOP_HOME/sbin:$PYENV_ROOT/shims:$PYENV_ROOT/bin:$COMPOSER_ROOT/vendor/bin:$PATH:$JAVA_HOME/bin:$GOPATH/bin:$HADOOP_HOME/bin:$FLUME_HOME/bin:$GOROOT/bin
+export PATH=/home/linuxbrew/.linuxbrew/bin:$HADOOP_HOME/bin:$HADOOP_HOME/sbin:$PYENV_ROOT/shims:$PYENV_ROOT/bin:$COMPOSER_ROOT/vendor/bin:$PATH:$JAVA_HOME/bin:$GOPATH/bin:$HADOOP_HOME/bin:$FLUME_HOME/bin:$GOROOT/bin
 
 # include libs
 export PHP_ZLIB_DIR="/usr/local/opt/zlib"
