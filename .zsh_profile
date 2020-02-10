@@ -16,9 +16,6 @@ prompt_context () {
 alias ll='ls -lah'
 alias vi=vim
 
-alias mail='/bin/cat /dev/null > /var/mail/fyibmsd'
-
-
 alias ag='ag --color-match=36'
 alias pack="mvn clean package -DskipTests=true -Dmaven.test.skip=true"
 
@@ -42,6 +39,7 @@ alias rmpyc='find . -name "*.pyc" | xargs rm'
 
 # Software {
 alias typora="/usr/bin/open -a /Applications/Typora.app $1"
+
 alias subl="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
 
 code () {  
@@ -78,41 +76,8 @@ function update() {
 # }
 
 # functions
-#
-# change php version
-function chp () {
-    echo $1 > ~/.php_version
-}
-
-function run () {
-	g++ $1 -o /tmp/$1
-	/tmp/$1
-	rm /tmp/$1
-}
-
-function github() {
-	n=$(echo $1 | awk -F ':' '{print $2}')
-	d=~/code/org/github/$n[0,-5]
-	/bin/mkdir -p $d
-	/usr/local/bin/git clone --depth=1 $1 $d
-	cd $d
-}
-
-function org() {
-	n=$(echo $1 | awk -F ':' '{print $2}')
-	d=~/code/org/$n[0,-5]
-	/bin/mkdir -p $d
-	/usr/local/bin/git clone --depth=1 $1 $d
-	cd $d
-}
-
-#
-function homestead() {
-    ( cd ~/.homestead && vagrant $* )
-}
-
-function centos() {
-    ( cd ~/code/scripts/vagrant/centos && vagrant $* )
+function v() {
+    ( cd ~/code/scripts/bionic && vagrant $* )
 }
 
 function transfer() {
@@ -127,8 +92,6 @@ alias clone='git clone --depth=1'
 
 # config files
 alias hosts="sudo vim /etc/hosts"
-alias phpini="subl /usr/local/etc/php/5.6/php.ini"
-alias pac="subl ~/code/php/www/vps.pac"
 
 # extra
 alias server="php -S 0.0.0.0:8000 -t ."
@@ -139,7 +102,6 @@ alias bst="brew services start"
 alias bsp="brew services stop"
 alias bsr="brew services restart"
 
-# alias composer="php -c /usr/local/etc/php/5.6/composer.ini /usr/local/bin/composer $*"
 alias ip="ifconfig | grep 'inet ' | uniq"
 
 # docker
@@ -152,23 +114,19 @@ function drmi() {
 
 export LC_CTYPE="zh_CN.UTF-8"
 
-# PHP
-export PHP_HOME="/usr/local/opt/php@`cat ~/.php_version`"
-
 # Java
 export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
 export CLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar
 
 # Golang
-export GOROOT=/usr/local/opt/go/libexec
-export GOPATH=~/code/go
+export GOROOT=/usr/local/opt/go@1.12/libexec
+export GOPATH=$HOME/code/go
 export GO111MODULE=on
-export PHP=$HOME/code/php
-export PTOOLSPATH=$HOME/code/php/library/vendor/phalcon/devtools
 
 # NodeJS
 export NODE_PATH="/usr/local/lib/node_modules"
-export NODE_HOME="/usr/local/opt/node@10"
+export NODE_HOME="/usr/local/opt/node"
+
 export EDITOR="/usr/local/bin/vim"
 
 # Pyenv
@@ -177,10 +135,7 @@ export EDITOR="/usr/local/bin/vim"
 # Rust
 export RUST_HOME=/usr/local/opt/rust
 
-export PATH=$NODE_HOME/bin:/usr/local/opt/qt/bin:/usr/local/opt/bison/bin:/usr/local/sbin:$PHP_HOME/bin:$PHP_HOME/sbin:$JAVA_HOME/bin:$GOPATH/bin:$GOROOT/bin:~/.composer/vendor/bin:~/.cargo/bin:$PATH
-
-# include libs
-export PHP_ZLIB_DIR="/usr/local/opt/zlib"
+export PATH=$NODE_HOME/bin:/usr/local/opt/qt/bin:/usr/local/opt/bison/bin:/usr/local/sbin:$JAVA_HOME/bin:$GOPATH/bin:$GOROOT/bin:~/.composer/vendor/bin:~/.cargo/bin:$PATH
 
 # homebrew http://ban.ninja/ @dep
 export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles
@@ -194,6 +149,7 @@ export LESS_TERMCAP_se=$'\E[0m'
 export LESS_TERMCAP_so=$'\E[01;44;33m'
 export LESS_TERMCAP_ue=$'\E[0m'
 export LESS_TERMCAP_us=$'\E[01;32m'
+
 source ~/.zsh/.zsh_local
 
 serve () {
@@ -208,8 +164,7 @@ serve () {
 }
 
 # elk
-export ES_HOME=/usr/local/var/homebrew/linked/elasticsearch-full
-export ES_DATA=/usr/local/var/lib/elasticsearch
-export KIBANA_HOME=/usr/local/var/homebrew/linked/kibana-full
-export KIBANA_DATA=/usr/local/var/log/kibana
-
+export ES_HOME=/usr/local/opt/elasticsearch
+export ES_DATA=${ES_HOME}/data
+export KIBANA_HOME=/usr/local/opt/kibana
+export KIBANA_DATA=${KIBANA_HOME}/data
