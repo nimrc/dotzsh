@@ -7,7 +7,7 @@ plugins=(zsh-autosuggestions)
 # config {
 
 prompt_context () {
-    prompt_segment black default $HOST
+    prompt_segment black default "[$USER@$HOST]"
 }
 
 # }
@@ -77,7 +77,7 @@ function update() {
 
 # functions
 function v() {
-    ( cd ~/code/scripts/bionic && vagrant $* )
+    ( cd ~/code/scripts/ubuntu && vagrant $* )
 }
 
 function transfer() {
