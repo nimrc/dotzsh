@@ -123,6 +123,7 @@ export HADOOP_HOME=/usr/local/hadoop
 # Golang
 export GOROOT=/usr/lib/go
 export GOPATH=$HOME/code/go
+export GO111MODULE=on
 export PHP=$HOME/code/php
 export PTOOLSPATH=$HOME/code/php/library/vendor/phalcon/devtools
 
@@ -136,10 +137,11 @@ export PYENV_ROOT="$HOME/.pyenv"
 export COMPOSER_ROOT="$HOME/.config/composer"
 
 
-export PATH=/home/linuxbrew/.linuxbrew/bin:$HADOOP_HOME/bin:$HADOOP_HOME/sbin:$PYENV_ROOT/shims:$PYENV_ROOT/bin:$COMPOSER_ROOT/vendor/bin:$PATH:$JAVA_HOME/bin:$GOPATH/bin:$HADOOP_HOME/bin:$FLUME_HOME/bin:$GOROOT/bin
+export PATH=$HOME/.cargo/bin:/home/linuxbrew/.linuxbrew/bin:$HADOOP_HOME/bin:$HADOOP_HOME/sbin:$PYENV_ROOT/shims:$PYENV_ROOT/bin:$COMPOSER_ROOT/vendor/bin:$PATH:$JAVA_HOME/bin:$GOPATH/bin:$HADOOP_HOME/bin:$FLUME_HOME/bin:$GOROOT/bin
 
 # include libs
 export PHP_ZLIB_DIR="/usr/local/opt/zlib"
+
 
 # Highlight linux man page
 export LESS_TERMCAP_mb=$'\E[01;31m'
@@ -149,4 +151,5 @@ export LESS_TERMCAP_se=$'\E[0m'
 export LESS_TERMCAP_so=$'\E[01;44;33m'
 export LESS_TERMCAP_ue=$'\E[0m'
 export LESS_TERMCAP_us=$'\E[01;32m'
-source ~/.zsh/.zsh_local
+
+source $HOME/.zsh/.zsh_local
