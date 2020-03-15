@@ -73,7 +73,7 @@ function destroy() {
 
 # git update
 function update() {
-	git add . && git commit -m "update" && git push origin $(git_current_branch)
+	git add . && git commit -am "`curl -s http://whatthecommit.com/index.txt `" && git push origin $(git_current_branch)
 }
 
 # }
