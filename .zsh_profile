@@ -125,6 +125,7 @@ export CLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar
 export GOVERSION=`cat ~/.goversion`
 export GOROOT=`gvm -v ${GOVERSION}`/libexec
 export GOPATH=$HOME/code/go
+export GOBIN=$GOPATH/bin.$GOVERSION
 export GO111MODULE=on
 
 # NodeJS
@@ -139,7 +140,7 @@ export EDITOR="/usr/local/bin/vim"
 # Rust
 export RUST_HOME=/usr/local/opt/rust
 
-export PATH=$NODE_HOME/bin:/usr/local/opt/qt/bin:/usr/local/opt/bison/bin:/usr/local/sbin:$JAVA_HOME/bin:$GOPATH/bin:$GOROOT/bin:~/.composer/vendor/bin:~/.cargo/bin:$PATH
+export PATH=$NODE_HOME/bin:/usr/local/opt/qt/bin:/usr/local/opt/bison/bin:/usr/local/sbin:$JAVA_HOME/bin:$GOBIN:$GOROOT/bin:~/.composer/vendor/bin:~/.cargo/bin:$PATH
 
 # homebrew http://ban.ninja/ @dep
 export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles
