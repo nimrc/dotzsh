@@ -99,11 +99,6 @@ alias hosts="sudo vim /etc/hosts"
 # extra
 alias server="php -S 0.0.0.0:8000 -t ."
 
-# brew services
-alias bls="brew services list"
-alias bst="brew services start"
-alias bsp="brew services stop"
-alias bsr="brew services restart"
 
 alias ip="ifconfig | grep 'inet ' | uniq"
 
@@ -156,6 +151,11 @@ export LESS_TERMCAP_ue=$'\E[0m'
 export LESS_TERMCAP_us=$'\E[01;32m'
 
 source ~/.zsh/.zsh_local
+
+for module in `ls ~/.zsh/*.zsh`
+do
+	source $module
+done
 
 serve () {
 	if [[ -n "$1" && -n "$2" ]]
