@@ -31,8 +31,10 @@ alias nsr="sudo nginx -s reload"
 
 alias clone='git clone --depth=1'
 
+alias grcb='git push origin master:$(git_current_branch)'
 alias grpush='git push origin HEAD:refs/for/$(git_current_branch)'
 alias grbd='git push origin :'
+alias gcpush='grcb && grpush'
 
 alias proxy='export ALL_PROXY=socks5://127.0.0.1:1080'
 
