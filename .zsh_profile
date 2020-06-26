@@ -13,6 +13,9 @@ prompt_context () {
 # }
 
 # alias {
+#
+alias rr="cargo run | bat -l rust"
+
 alias ll='ls -lah'
 alias vi=vim
 
@@ -136,6 +139,7 @@ export EDITOR="/usr/local/bin/vim"
 
 # Rust
 export RUST_HOME=/usr/local/opt/rust
+export RUST_SRC_PATH=$HOME/code/rust/rust_src
 
 export PATH=$NODE_HOME/bin:/usr/local/opt/qt/bin:/usr/local/opt/bison/bin:/usr/local/sbin:$JAVA_HOME/bin:$GOBIN:$GOROOT/bin:~/.composer/vendor/bin:~/.cargo/bin:$PATH
 
