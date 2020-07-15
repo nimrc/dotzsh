@@ -82,24 +82,7 @@ alias hosts="subl /etc/hosts"
 alias phpini="subl /usr/local/etc/php/5.6/php.ini"
 alias pac="subl ~/code/php/www/vps.pac"
 
-# extra
-alias server="php -S 0.0.0.0:8000 -t ."
-
-# change version
-alias chv="sudo update-alternatives --config"
-alias chp="sudo update-alternatives --set php"
-
 alias ip="ifconfig | grep 'inet ' | uniq"
-
-# vps
-alias ol="ssh work@172.16.0.5 -p 2322"
-alias dev="ssh root@172.18.1.7"
-alias vagr="ssh vagrant@192.168.10.10"
-alias co="ssh core@192.168.10.30"
-alias rhel="ssh me@54.64.9.18"
-alias ecs01="ssh root@123.56.4.184"
-alias ecs02="ssh root@60.205.189.57"
-alias ali="ssh root@123.56.50.105"
 
 # docker
 function drm() {
@@ -121,11 +104,11 @@ export FLUME_HOME=/usr/local/flume
 export HADOOP_HOME=/usr/local/hadoop
 
 # Golang
-export GOROOT=/usr/lib/go
+export GOVERSION=$(cat $HOME/.goversion)
+export GOROOT=$(gvm -v $GOVERSION)/libexec
 export GOPATH=$HOME/code/go
+export GOBIN=$GOPATH/bin/$GOVERSION
 export GO111MODULE=on
-export PHP=$HOME/code/php
-export PTOOLSPATH=$HOME/code/php/library/vendor/phalcon/devtools
 
 # NodeJS
 export NODE_PATH="/usr/local/lib/node_modules"
@@ -136,8 +119,7 @@ export PYENV_ROOT="$HOME/.pyenv"
 
 export COMPOSER_ROOT="$HOME/.config/composer"
 
-
-export PATH=$HOME/.cargo/bin:/home/linuxbrew/.linuxbrew/bin:$HADOOP_HOME/bin:$HADOOP_HOME/sbin:$PYENV_ROOT/shims:$PYENV_ROOT/bin:$COMPOSER_ROOT/vendor/bin:$PATH:$JAVA_HOME/bin:$GOPATH/bin:$HADOOP_HOME/bin:$FLUME_HOME/bin:$GOROOT/bin
+export PATH=$GOBIN:$GOROOT/bin:$HOME/.cargo/bin:/home/linuxbrew/.linuxbrew/bin:$HADOOP_HOME/bin:$HADOOP_HOME/sbin:$PYENV_ROOT/shims:$PYENV_ROOT/bin:$COMPOSER_ROOT/vendor/bin:$PATH:$JAVA_HOME/bin:$GOPATH/bin:$HADOOP_HOME/bin:$FLUME_HOME/bin
 
 # include libs
 export PHP_ZLIB_DIR="/usr/local/opt/zlib"
