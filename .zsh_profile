@@ -49,12 +49,8 @@ function destroy() {
    /bin/rm -rf $current
 }
 
-function update() {
-	lorem=$(curl -skL https://lorem.nimrc.com)
-	comment=${1-$lorem}
-    git add .
-    git commit -m $comment
-    ggpush
+function update () {
+	git add . && git commit -am "`curl -s http://whatthecommit.com/index.txt `" && git push origin $(git_current_branch)
 }
 
 # }
