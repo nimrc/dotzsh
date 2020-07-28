@@ -141,7 +141,7 @@ export EDITOR="/usr/local/bin/vim"
 export RUST_HOME=/usr/local/opt/rust
 export RUST_SRC_PATH=$HOME/code/rust/rust_src
 
-export PATH=$NODE_HOME/bin:/usr/local/opt/qt/bin:/usr/local/opt/bison/bin:/usr/local/sbin:$JAVA_HOME/bin:$GOBIN:$GOROOT/bin:~/.composer/vendor/bin:~/.cargo/bin:$PATH
+export PATH=$NODE_HOME/bin:/usr/local/opt/llvm/bin:/usr/local/opt/qt/bin:/usr/local/opt/bison/bin:/usr/local/sbin:$JAVA_HOME/bin:$GOBIN:$GOROOT/bin:~/.composer/vendor/bin:~/.cargo/bin:$PATH
 
 # homebrew http://ban.ninja/ @dep
 export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles
