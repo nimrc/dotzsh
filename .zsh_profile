@@ -10,6 +10,11 @@ prompt_context () {
     prompt_segment black default "[$USER@$HOST]"
 }
 
+# Dir: current working directory
+prompt_dir() {
+  prompt_segment blue $CURRENT_FG '%3~'
+}
+
 # }
 
 # alias {
@@ -49,6 +54,8 @@ alias rmpyc='find . -name "*.pyc" | xargs rm'
 alias typora="/usr/bin/open -a /Applications/Typora.app $1"
 
 alias subl="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
+
+alias supervisorctl="/usr/local/bin/supervisorctl -c /usr/local/etc/supervisord.ini"
 
 code () {  
     if [[ $# = 0 ]]  
@@ -97,13 +104,6 @@ function transfer() {
 }
 
 alias clone='git clone --depth=1'
-
-# config files
-alias hosts="sudo vim /etc/hosts"
-
-# extra
-alias server="php -S 0.0.0.0:8000 -t ."
-
 
 alias ip="ifconfig | grep 'inet ' | uniq"
 
