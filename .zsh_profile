@@ -100,8 +100,6 @@ export FLUME_HOME=/usr/local/flume
 export HADOOP_HOME=/usr/local/hadoop
 
 # Golang
-export GOVERSION=$(cat $HOME/.goversion)
-export GOROOT=$(gvm -v $GOVERSION)/libexec
 export GOPATH=$HOME/code/go
 export GOBIN=$GOPATH/bin/$GOVERSION
 export GO111MODULE=on
