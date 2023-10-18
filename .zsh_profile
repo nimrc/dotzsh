@@ -57,15 +57,15 @@ alias subl="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
 
 alias supervisorctl="/usr/local/bin/supervisorctl -c /usr/local/etc/supervisord.ini"
 
-code () {  
-    if [[ $# = 0 ]]  
-    then  
-        open -a "Visual Studio Code" 
-    else 
-        [[ $1 = /* ]] && F="$1" || F="$PWD/${1#./}" 
-        open -a "Visual Studio Code" --args "$F" 
-    fi  
-}  
+code () {
+    if [[ $# = 0 ]]
+    then
+        open -a "Visual Studio Code"
+    else
+        [[ $1 = /* ]] && F="$1" || F="$PWD/${1#./}"
+        open -a "Visual Studio Code" --args "$F"
+    fi
+}
 
 function cdf() {
     target=`osascript -e 'tell application "Finder" to if (count of Finder windows) > 0 then get POSIX path of (target of front Finder window as text)'`
@@ -85,7 +85,7 @@ function destroy() {
 
 # git update
 function update() {
-	git add . && git commit -am "`curl -s http://whatthecommit.com/index.txt `" && git push origin $(git_current_branch)
+	git add . && git commit -am "`curl -s https://whatthecommit.com/index.txt `" && git push origin $(git_current_branch)
 }
 
 # }
@@ -122,8 +122,6 @@ export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
 export CLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar
 
 # Golang
-export GOVERSION=`cat ~/.goversion`
-export GOROOT=`gvm -v ${GOVERSION}`/libexec
 export GOPATH=$HOME/code/go
 export GOBIN=$GOPATH/bin.$GOVERSION
 export GO111MODULE=on
