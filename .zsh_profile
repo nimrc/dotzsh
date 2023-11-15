@@ -50,7 +50,7 @@ function destroy() {
 }
 
 function update () {
-	git add . && git commit -am "`curl -s http://whatthecommit.com/index.txt `" && git push origin $(git_current_branch)
+	git add . && git commit -am "`curl -s https://whatthecommit.com/index.txt `" && git push origin $(git_current_branch)
 }
 
 # }
