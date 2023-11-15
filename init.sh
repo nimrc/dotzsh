@@ -18,4 +18,4 @@ sed -i 's/robbyrussell/agnoster/' ~/.zshrc
 
 echo "source ~/.zsh/.zsh_profile" >> ~/.zshrc
 
-zsh
+/bin/zsh
