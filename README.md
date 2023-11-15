@@ -4,5 +4,5 @@
 
 ```
 # 注意：安装将删除原有ZSH配置
-curl -sL https://git.io/fhAbl | bash -
+curl -sL https://raw.githubusercontent.com/nimrc/dotzsh/master/init.sh | bash -
 ```
