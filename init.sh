@@ -14,7 +14,7 @@ git submodule init
 
 git submodule update
 
-sed 's/robbyrussell/agnoster/' ~/.zshrc
+sed -i 's/robbyrussell/agnoster/' ~/.zshrc
 
 echo "source ~/.zsh/.zsh_profile" >> ~/.zshrc
 

@@ -117,18 +117,10 @@ function drmi() {
 
 export LC_CTYPE="zh_CN.UTF-8"
 
-# Java
-export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
-export CLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar
-
 # Golang
 export GOPATH=$HOME/code/go
 export GOBIN=$GOPATH/bin.$GOVERSION
 export GO111MODULE=on
-
-# NodeJS
-export NODE_PATH="/usr/local/lib/node_modules"
-export NODE_HOME="/usr/local/opt/node"
 
 export EDITOR="/usr/local/bin/vim"
 
@@ -140,10 +132,6 @@ export RUST_HOME=/usr/local/opt/rust
 export RUST_SRC_PATH=$HOME/code/rust/rust_src
 
 export PATH=$NODE_HOME/bin:/usr/local/opt/llvm/bin:/usr/local/opt/qt/bin:/usr/local/opt/bison/bin:/usr/local/sbin:$JAVA_HOME/bin:$GOBIN:$GOROOT/bin:~/.composer/vendor/bin:~/.cargo/bin:$PATH
-
-# homebrew http://ban.ninja/ @dep
-export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles
-
 
 # Highlight linux man page
 export LESS_TERMCAP_mb=$'\E[01;31m'
@@ -161,19 +149,3 @@ do
 	source $module
 done
 
-serve () {
-	if [[ -n "$1" && -n "$2" ]]
-	then
-		sudo bash ~/code/scripts/server-scripts/serve-laravel.sh "$1" "$2" 80
-	else
-		echo "Error: missing required parameters."
-		echo "Usage: "
-		echo "  serve domain path"
-	fi
-}
-
-# elk
-export ES_HOME=/usr/local/opt/elasticsearch
-export ES_DATA=${ES_HOME}/data
-export KIBANA_HOME=/usr/local/opt/kibana
-export KIBANA_DATA=${KIBANA_HOME}/data
