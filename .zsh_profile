@@ -37,12 +37,11 @@ alias -s bz2='tar -xjvf'
 alias nt="sudo nginx -t"
 alias nsr="sudo nginx -s reload"
 
-alias clone='git clone --depth=1'
-
 alias grcb='git push origin master:$(git_current_branch)'
 alias grpush='git push origin HEAD:refs/for/$(git_current_branch)'
 alias grbd='git push origin :'
 alias gcpush='grcb && grpush'
+alias gsha='git rev-parse --short=7 HEAD'
 
 alias proxy='export ALL_PROXY=socks5://127.0.0.1:1080'
 
@@ -148,4 +147,3 @@ for module in `ls ~/.zsh/*.zsh`
 do
 	source $module
 done
-
