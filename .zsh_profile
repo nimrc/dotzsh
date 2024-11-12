@@ -27,8 +27,6 @@ alias vi=vim
 alias ag='ag --color-match=36'
 alias pack="mvn clean package -DskipTests=true -Dmaven.test.skip=true"
 
-alias http="/usr/local/bin/http --verify=no"
-
 alias -s gz='tar -xzvf'
 alias -s tgz='tar -xzvf'
 alias -s zip='unzip'
