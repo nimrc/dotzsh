@@ -44,7 +44,7 @@ alias grpush='git push origin HEAD:refs/for/$(git_current_branch)'
 alias grbd='git push origin :'
 alias gcpush='grcb && grpush'
 alias gsha='git rev-parse --short=7 HEAD'
-alias grld='git branch -a | grep -v remotes | grep -v main | grep -v master | xargs -n 1 git branch -D'
+alias grld='git worktree list --porcelain | grep "^worktree " | grep -v "$(git rev-parse --show-toplevel)$" | sed "s/^worktree //" | xargs -I{} git worktree remove --force {} 2>/dev/null; git branch -a | grep -v remotes | grep -v main | grep -v master | grep -v "^[*+]" | xargs -n 1 git branch -D'
 
 alias proxy='export ALL_PROXY=socks5://127.0.0.1:1080'
 
