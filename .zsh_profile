@@ -32,6 +32,33 @@ alias -s bz2='tar -xjvf'
 
 alias rr="cargo run | bat -l rust"
 
+# kubectl context switch via symlink: `kc <name>` links ~/.kube/<name>.yaml -> ~/.kube/config
+kc() {
+    local kube_dir="$HOME/.kube"
+    local config="$kube_dir/config"
+    if (( $# == 0 )); then
+        local current=""
+        [[ -L "$config" ]] && current="${$(readlink "$config"):t:r}"
+        for f in "$kube_dir"/*.yaml(N); do
+            local name="${f:t:r}"
+            if [[ "$name" == "$current" ]]; then
+                print -P "* %F{green}${name}%f"
+            else
+                print "  ${name}"
+            fi
+        done
+        return
+    fi
+    local target="$kube_dir/$1.yaml"
+    if [[ ! -f "$target" ]]; then
+        print -u2 "kc: no such kubeconfig: $1"
+        return 1
+    fi
+    ln -sf "$target" "$config" && print "switched to $1"
+}
+_kc() { compadd -- ${$(print -l $HOME/.kube/*.yaml(N:t:r))} }
+compdef _kc kc 2>/dev/null
+
 # git
 alias grcb='git push origin $(git_current_branch):$(git_current_branch)'
 alias grpush='git push origin HEAD:refs/for/$(git_current_branch)'
